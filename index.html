@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Campaign Builder | Smart QR Marketing Platform</title>
+    <meta name="description"
+        content="Build dynamic QR marketing campaigns, track scans in real-time, and optimize engagement with premium branded QR experiences.">
+
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@10.0.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- Using 5.3.0 since 10.0.0 is not a valid version -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="assets/images/logo.png" alt="QR Logo" class="me-2">
+                <span class="fw-bold text-white fs-4">QR<span class="text-gradient">Flow</span></span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="bi bi-list text-white fs-2"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="home2.html">Home 2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <a href="dashboard.html" class="btn btn-outline-custom btn-sm d-flex align-items-center"
+                        title="Dashboard">
+                        <i class="bi bi-grid-fill"></i>
+                    </a>
+                    <a href="login.html" class="btn btn-outline-custom btn-sm d-flex align-items-center" title="Login">
+                        <i class="bi bi-box-arrow-in-right"></i>
+                    </a>
+                    <div class="d-flex gap-2">
+                        <button class="btn btn-link text-white p-0" id="theme-toggle" title="Toggle Theme">
+                            <i class="bi bi-moon-stars"></i>
+                        </button>
+                        <button class="btn btn-link text-white p-0" id="rtl-toggle" title="Toggle RTL">
+                            <i class="bi bi-translate"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section text-center text-lg-start">
+        <div class="hero-glow"></div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <h1 class="display-3 fw-extrabold mb-4">
+                        Smart <span class="text-gradient">QR Marketing</span> <br> Campaigns That Convert
+                    </h1>
+                    <p class="lead text-secondary mb-5 pe-lg-5">
+                        Build dynamic QR campaigns, track real-time scans, edit destinations instantly, and optimize
+                        customer engagement without reprinting codes.
+                    </p>
+                    <div class="d-flex flex-column flex-sm-row gap-3">
+                        <a href="dashboard.html" class="btn btn-primary-custom btn-lg">Start Free Campaign</a>
+                    </div>
+                    <div class="mt-5 d-flex align-items-center gap-4 text-secondary">
+                        <div class="d-flex align-items-center"><i
+                                class="bi bi-check-circle-fill text-primary-accent me-2"></i> Dynamic Routing</div>
+                        <div class="d-flex align-items-center"><i
+                                class="bi bi-check-circle-fill text-primary-accent me-2"></i> Real-time Tracking</div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-mockup-wrapper float-animation">
+                        <img src="https://yi-files.yellowimages.com/products/2038000/2038367/3128551-cover.jpg"
+                            alt="QR Dashboard Mockup" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Core Services Section -->
+    <section class="py-5 my-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 mb-3">One Platform, <span class="text-gradient">Endless Possibilities</span></h2>
+                <p class="text-secondary max-w-600 mx-auto">Everything you need to launch and scale your QR marketing
+                    strategy.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="glass-card p-5 h-100">
+                        <div class="mb-4 fs-1 text-primary-accent border-bottom pb-3">01</div>
+                        <i class="bi bi-qr-code fs-1 text-gradient mb-4 d-block"></i>
+                        <h3 class="h4 mb-3">Dynamic QR Builder</h3>
+                        <p class="text-secondary">Create branded, multi-destination QR codes that stay same while
+                            content changes.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="glass-card p-5 h-100">
+                        <div class="mb-4 fs-1 text-primary-accent border-bottom pb-3">02</div>
+                        <i class="bi bi-graph-up-arrow fs-1 text-gradient mb-4 d-block"></i>
+                        <h3 class="h4 mb-3">Real-time Analytics</h3>
+                        <p class="text-secondary">Track scans by location, device, and time. Visualise data with premium
+                            charts.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="glass-card p-5 h-100">
+                        <div class="mb-4 fs-1 text-primary-accent border-bottom pb-3">03</div>
+                        <i class="bi bi-layers fs-1 text-gradient mb-4 d-block"></i>
+                        <h3 class="h4 mb-3">Campaign Manager</h3>
+                        <p class="text-secondary">Manage hundreds of clients and campaigns from a single unified
+                            dashboard.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio/Showcase Section -->
+    <section class="py-5 bg-secondary-bg">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-5 mb-lg-0">
+                    <h2 class="display-5 mb-4">Crafted for <span class="text-gradient">Premium Brands</span></h2>
+                    <p class="text-secondary mb-5">See how our QR campaigns transform physical marketing into digital
+                        intelligence for leading industries.</p>
+                    <ul class="list-unstyled">
+                        <li class="mb-4 d-flex align-items-start">
+                            <i class="bi bi-lightning-charge-fill text-primary-accent me-3 fs-4"></i>
+                            <div>
+                                <h4 class="h5">Retail Engagement</h4>
+                                <p class="text-secondary text-sm">Boosted physical store returns by 45% using dynamic
+                                    discounts.</p>
+                            </div>
+                        </li>
+                        <li class="mb-4 d-flex align-items-start">
+                            <i class="bi bi-heart-fill text-primary-accent me-3 fs-4"></i>
+                            <div>
+                                <h4 class="h5">Restaurant Digital Menus</h4>
+                                <p class="text-secondary text-sm">Interactive menu experiences with real-time update
+                                    capabilities.</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="portfolio.html" class="btn btn-outline-custom">View All Case Studies</a>
+                </div>
+                <div class="col-lg-7">
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <div class="glass-card p-2">
+                                <img src="https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80&w=400"
+                                    class="img-fluid rounded-4" alt="Retail">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="glass-card p-2">
+                                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=400"
+                                    class="img-fluid rounded-4" alt="Restaurant">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted By / Stats Section -->
+    <section class="py-5">
+        <div class="container py-5">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-4">
+                    <h2 class="display-5 mb-4">Trusted by <span class="text-gradient">5,000+ Brands</span> worldwide.
+                    </h2>
+                    <p class="text-secondary lead">Our platform powers QR marketing for freelancers, small businesses,
+                        and enterprise agencies in 150+ countries.</p>
+                </div>
+                <div class="col-lg-8">
+                    <div class="row g-4 text-center">
+                        <div class="col-md-4">
+                            <div class="glass-card p-4">
+                                <h3 class="display-5 fw-bold text-gradient mb-2">12M+</h3>
+                                <p class="text-secondary small mb-0 font-monospace">SCANS TRACKED</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="glass-card p-4">
+                                <h3 class="display-5 fw-bold text-gradient mb-2">45k</h3>
+                                <p class="text-secondary small mb-0 font-monospace">ACTIVE CAMPAIGNS</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="glass-card p-4">
+                                <h3 class="display-5 fw-bold text-gradient mb-2">99.9%</h3>
+                                <p class="text-secondary small mb-0 font-monospace">UPTIME GUARANTEE</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="py-5 bg-secondary-bg">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="display-5 mb-3">Simple <span class="text-gradient">3-Step</span> Workflow</h2>
+                <p class="text-secondary max-w-600 mx-auto">Launch your professional campaign in under 60 seconds with
+                    our intuitive builder.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="glass-card p-5 h-100 text-center">
+                        <div class="mb-4 mx-auto d-flex align-items-center justify-content-center bg-primary-accent text-dark fw-bold rounded-circle shadow"
+                            style="width: 70px; height: 70px; font-size: 1.5rem;">1</div>
+                        <h4 class="h5 mb-3">Create & Brand</h4>
+                        <p class="text-secondary mb-0">Input your URL and customize the QR with your brand colors,
+                            shapes, and official logo.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="glass-card p-5 h-100 text-center">
+                        <div class="mb-4 mx-auto d-flex align-items-center justify-content-center bg-primary-accent text-dark fw-bold rounded-circle shadow"
+                            style="width: 70px; height: 70px; font-size: 1.5rem;">2</div>
+                        <h4 class="h5 mb-3">Deploy & Distribute</h4>
+                        <p class="text-secondary mb-0">Print your high-resolution QR on any physical asset—from flyers
+                            to digital billboards.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="glass-card p-5 h-100 text-center">
+                        <div class="mb-4 mx-auto d-flex align-items-center justify-content-center bg-primary-accent text-dark fw-bold rounded-circle shadow"
+                            style="width: 70px; height: 70px; font-size: 1.5rem;">3</div>
+                        <h4 class="h5 mb-3">Track & Optimize</h4>
+                        <p class="text-secondary mb-0">Monitor scans in real-time and update destinations instantly
+                            without ever re-printing.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Preview Section -->
+    <section class="py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="display-5 mb-3">Plans That <span class="text-gradient">Scale With You</span></h2>
+                <p class="text-secondary max-w-600 mx-auto">Start free and upgrade as your campaigns grow. No hidden
+                    fees.</p>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="glass-card p-5 h-100 d-flex flex-column">
+                        <div style="height: 40px;" class="mb-4"></div> <!-- Badge Spacer -->
+                        <h4 class="h5 text-white mb-4">Starter</h4>
+                        <div class="display-4 fw-bold mb-4 text-white">$0 <span
+                                class="fs-6 text-secondary fw-normal">/mo</span></div>
+                        <ul class="list-unstyled mb-5 text-secondary">
+                            <li class="mb-3 d-flex align-items-center gap-2"><i
+                                    class="bi bi-check2 text-primary-accent fs-5"></i> 5 Dynamic QR Codes</li>
+                            <li class="mb-3 d-flex align-items-center gap-2"><i
+                                    class="bi bi-check2 text-primary-accent fs-5"></i> Basic Scan Analytics</li>
+                            <li class="mb-3 d-flex align-items-center gap-2"><i
+                                    class="bi bi-check2 text-primary-accent fs-5"></i> Standard QR Design</li>
+                        </ul>
+                        <div class="mt-auto">
+                            <a href="register.html" class="btn btn-outline-custom w-100">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="glass-card p-5 h-100 border-primary-accent d-flex flex-column"
+                        style="box-shadow: 0 0 40px rgba(94, 234, 212, 0.1);">
+                        <div class="text-center mb-4" style="height: 40px;">
+                            <div class="badge bg-primary-accent text-dark px-3 py-2">MOST POPULAR</div>
+                        </div>
+                        <h4 class="h5 text-white mb-4">Business Pro</h4>
+                        <div class="display-4 fw-bold mb-4 text-white">$29 <span
+                                class="fs-6 text-secondary fw-normal">/mo</span></div>
+                        <ul class="list-unstyled mb-5 text-secondary">
+                            <li class="mb-3 d-flex align-items-center gap-2"><i
+                                    class="bi bi-check2 text-primary-accent fs-5"></i> Unlimited dynamic QRs</li>
+                            <li class="mb-3 d-flex align-items-center gap-2"><i
+                                    class="bi bi-check2 text-primary-accent fs-5"></i> Real-time Intel Tracking</li>
+                            <li class="mb-3 d-flex align-items-center gap-2"><i
+                                    class="bi bi-check2 text-primary-accent fs-5"></i> Branded PDF Reports</li>
+                        </ul>
+                        <div class="mt-auto">
+                            <a href="register.html" class="btn btn-primary-custom w-100">Start Free Trial</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="glass-card p-5 h-100 d-flex flex-column">
+                        <div style="height: 40px;" class="mb-4"></div> <!-- Badge Spacer -->
+                        <h4 class="h5 text-white mb-4">Enterprise</h4>
+                        <div class="display-4 fw-bold mb-4 text-white">Custom</div>
+                        <p class="text-secondary mb-5">For large scale marketing agencies and corporate brands requiring
+                            white-label solutions.</p>
+                        <ul class="list-unstyled mb-5 text-secondary">
+                            <li class="mb-3 d-flex align-items-center gap-2"><i
+                                    class="bi bi-check2 text-primary-accent fs-5"></i> Dedicated Account Manager</li>
+                            <li class="mb-3 d-flex align-items-center gap-2"><i
+                                    class="bi bi-check2 text-primary-accent fs-5"></i> Custom API Integration</li>
+                        </ul>
+                        <div class="mt-auto">
+                            <a href="contact.html" class="btn btn-outline-custom w-100">Contact Sales</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5 mt-5 border-top border-color">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <a class="navbar-brand d-flex align-items-center mb-4" href="#">
+                        <img src="assets/images/logo.png" alt="QR Logo" height="30" class="me-2">
+                        <span class="fw-bold text-white fs-4">QR<span class="text-gradient">Flow</span></span>
+                    </a>
+                    <p class="text-secondary">Premium QR Marketing intelligence platform for modern brands and
+                        freelancers.</p>
+                    <div class="d-flex gap-3 fs-4 mt-4 social-links">
+                        <a href="#" class="text-secondary"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="text-secondary"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-secondary"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="text-secondary"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-secondary"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5 class="mb-4">Services</h5>
+                    <ul class="list-unstyled text-secondary">
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Dynamic QR</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Bulk Gen</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h5 class="mb-4">Company</h5>
+                    <ul class="list-unstyled text-secondary">
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Portfolio</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="mb-4">Stay Updated</h5>
+                    <div class="glass-card p-2 d-flex">
+                        <input type="email" class="form-control bg-transparent border-0 text-white shadow-none"
+                            placeholder="Email Address">
+                        <button class="btn btn-primary-custom ms-2">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5 pt-5 text-secondary border-top border-color">
+                <p>&copy; 2026 QRFlow Marketing. Built with Premium SaaS Aesthetic.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
