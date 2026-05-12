@@ -54,6 +54,11 @@ body.light-theme .h5 {
     color: #0f172a;
 }
 
+body.light-theme .hero-ai-enhanced-badge {
+    background-color: var(--secondary-accent) !important;
+    color: #ffffff !important;
+}
+
 /* Cards & Dashboard Elements */
 body.light-theme .glass-card {
     background: #ffffff;
@@ -131,6 +136,18 @@ body.light-theme footer {
 
 body.light-theme footer .text-secondary {
     color: #64748b !important;
+}
+
+body.light-theme footer a {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+body.light-theme footer a:hover {
+    color: var(--secondary-accent) !important;
+}
+
+body.light-theme footer .social-links a:hover {
+    transform: translateY(-5px);
 }
 
 body.light-theme .border-color {

@@ -1,10 +1,11 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Portfolio | QRFlow Marketing Case Studies</title>
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -16,13 +17,86 @@
             border-radius: 12px;
             margin-bottom: 25px;
         }
+
+        @media (min-width: 992px) and (max-width: 1199.98px) {
+            .portfolio-grid-primary>.col-lg-6 {
+                display: flex;
+            }
+
+            .portfolio-card-equal {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                height: 100%;
+            }
+
+            .portfolio-metrics {
+                margin-top: auto;
+                flex-wrap: wrap;
+            }
+        }
+
+        .testimonial-card-uniform {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .testimonial-header {
+            min-height: 56px;
+        }
+
+        body:not(.light-theme) .process-step-number {
+            background: rgba(94, 234, 212, 0.14);
+            border: 1px solid rgba(94, 234, 212, 0.35);
+            color: var(--primary-accent) !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @media (max-width: 576px) {
+            .luxe-metrics {
+                gap: 0.5rem !important;
+                flex-wrap: nowrap;
+            }
+
+            .luxe-chip {
+                white-space: nowrap;
+                font-size: 0.78rem !important;
+                padding: 0.45rem 0.6rem !important;
+            }
+
+            .process-kpi-card {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .process-kpi-value {
+                min-height: 52px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .process-kpi-label {
+                min-height: 72px;
+                display: flex;
+                align-items: flex-start;
+                justify-content: center;
+                text-align: center;
+                line-height: 1.35;
+            }
+        }
     </style>
 </head>
 
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+    <nav class="navbar navbar-expand-xl navbar-custom sticky-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
                 <img src="assets/images/logo.png" alt="QR Logo" class="me-2">
@@ -50,12 +124,12 @@
                         <i class="bi bi-box-arrow-in-right"></i>
                     </a>
                     <div class="d-flex gap-2">
-                        <button class="btn btn-link text-white p-0" id="theme-toggle" title="Toggle Theme">
-                            <i class="bi bi-moon-stars"></i>
-                        </button>
-                        <button class="btn btn-link text-white p-0" id="rtl-toggle" title="Toggle RTL">
-                            <i class="bi bi-translate"></i>
-                        </button>
+                        <button class="btn btn-outline-custom btn-sm d-flex align-items-center justify-content-center nav-toggle-btn" id="theme-toggle" title="Toggle Theme">
+                <i class="bi bi-moon-stars"></i>
+            </button>
+                        <button class="btn btn-outline-custom btn-sm d-flex align-items-center justify-content-center nav-toggle-btn" id="rtl-toggle" title="RTL">
+                <i class="bi bi-translate"></i>
+            </button>
                     </div>
                 </div>
             </div>
@@ -75,10 +149,10 @@
     <!-- Portfolio Grid -->
     <section class="py-5">
         <div class="container pb-5">
-            <div class="row g-5">
+            <div class="row g-5 portfolio-grid-primary">
                 <!-- Case Study 1 -->
                 <div class="col-lg-6">
-                    <div class="glass-card p-4">
+                    <div class="glass-card p-4 portfolio-card-equal">
                         <img src="https://sidgs.com/wp-content/uploads/2023/01/1500-x-914-Understanding-the-Impact-of-Digital-Transformation-in-Retail-and-Commerce.jpg"
                             class="portfolio-img w-100" alt="Retail Case">
                         <div class="d-flex justify-content-between align-items-start mb-3">
@@ -94,7 +168,7 @@
                         <p class="text-secondary mb-4">Integrated dynamic QR codes into 50+ retail locations across the
                             US. Enabled instant stock checking and personalized digital discounts, resulting in a 24%
                             increase in in-store conversions.</p>
-                        <div class="d-flex gap-3">
+                        <div class="d-flex gap-3 portfolio-metrics">
                             <span class="text-sm bg-secondary-bg px-3 py-2 rounded-3 border border-color"><i
                                     class="bi bi-graph-up me-2"></i> +12% Engagement</span>
                             <span class="text-sm bg-secondary-bg px-3 py-2 rounded-3 border border-color"><i
@@ -105,8 +179,8 @@
 
                 <!-- Case Study 2 -->
                 <div class="col-lg-6">
-                    <div class="glass-card p-4">
-                        <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=800"
+                    <div class="glass-card p-4 portfolio-card-equal">
+                        <img src="https://t4.ftcdn.net/jpg/04/03/62/35/360_F_403623508_OhrbkZ1zc2NzB9mN1d2ZcO1WrBDGKsxY.jpg"
                             class="portfolio-img w-100" alt="Restaurant Case">
                         <div class="d-flex justify-content-between align-items-start mb-3">
                             <div>
@@ -121,10 +195,10 @@
                         <p class="text-secondary mb-4">Replaced traditional paper menus with branded, interactive QR
                             experiences. Enabled real-time menu updates (seasonal specials) without reprinting, saving
                             $1,200/month in print costs.</p>
-                        <div class="d-flex gap-3">
-                            <span class="text-sm bg-secondary-bg px-3 py-2 rounded-3 border border-color"><i
+                        <div class="d-flex gap-3 portfolio-metrics luxe-metrics">
+                            <span class="text-sm bg-secondary-bg px-3 py-2 rounded-3 border border-color luxe-chip"><i
                                     class="bi bi-stars me-2"></i> Premium UI</span>
-                            <span class="text-sm bg-secondary-bg px-3 py-2 rounded-3 border border-color"><i
+                            <span class="text-sm bg-secondary-bg px-3 py-2 rounded-3 border border-color luxe-chip"><i
                                     class="bi bi-clock me-2"></i> 5s Load Time</span>
                         </div>
                     </div>
@@ -179,8 +253,8 @@
             </div>
             <div class="row g-4">
                 <div class="col-lg-4">
-                    <div class="glass-card p-5 h-100">
-                        <div class="d-flex align-items-center mb-4">
+                    <div class="glass-card p-5 h-100 testimonial-card-uniform">
+                        <div class="d-flex align-items-center mb-4 testimonial-header">
                             <img src="https://ui-avatars.com/api/?name=Sarah+Chen&background=5eead4&color=0b1020"
                                 class="rounded-circle me-3" width="50" alt="Client">
                             <div>
@@ -188,20 +262,20 @@
                                 <p class="text-secondary text-xs mb-0">Marketing Director, TechCorp</p>
                             </div>
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-3 testimonial-rating">
                             <i class="bi bi-star-fill text-warning"></i>
                             <i class="bi bi-star-fill text-warning"></i>
                             <i class="bi bi-star-fill text-warning"></i>
                             <i class="bi bi-star-fill text-warning"></i>
                             <i class="bi bi-star-fill text-warning"></i>
                         </div>
-                        <p class="text-secondary mb-0">"QRFlow revolutionized our event marketing. We saw a 300%
+                        <p class="text-secondary mb-0 testimonial-quote">"QRFlow revolutionized our event marketing. We saw a 300%
                             increase in engagement and could track ROI in real-time. Game-changing technology."</p>
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <div class="glass-card p-5 h-100">
-                        <div class="d-flex align-items-center mb-4">
+                    <div class="glass-card p-5 h-100 testimonial-card-uniform">
+                        <div class="d-flex align-items-center mb-4 testimonial-header">
                             <img src="https://ui-avatars.com/api/?name=Marcus+Johnson&background=5eead4&color=0b1020"
                                 class="rounded-circle me-3" width="50" alt="Client">
                             <div>
@@ -209,20 +283,20 @@
                                 <p class="text-secondary text-xs mb-0">CEO, RetailChain Pro</p>
                             </div>
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-3 testimonial-rating">
                             <i class="bi bi-star-fill text-warning"></i>
                             <i class="bi bi-star-fill text-warning"></i>
                             <i class="bi bi-star-fill text-warning"></i>
                             <i class="bi bi-star-fill text-warning"></i>
                             <i class="bi bi-star-fill text-warning"></i>
                         </div>
-                        <p class="text-secondary mb-0">"The analytics alone are worth the investment. We optimized our
+                        <p class="text-secondary mb-0 testimonial-quote">"The analytics alone are worth the investment. We optimized our
                             store layouts based on QR scan data and increased foot traffic by 45%."</p>
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <div class="glass-card p-5 h-100">
-                        <div class="d-flex align-items-center mb-4">
+                    <div class="glass-card p-5 h-100 testimonial-card-uniform">
+                        <div class="d-flex align-items-center mb-4 testimonial-header">
                             <img src="https://ui-avatars.com/api/?name=Emily+Rodriguez&background=5eead4&color=0b1020"
                                 class="rounded-circle me-3" width="50" alt="Client">
                             <div>
@@ -230,14 +304,14 @@
                                 <p class="text-secondary text-xs mb-0">Creative Director, AdAgency X</p>
                             </div>
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-3 testimonial-rating">
                             <i class="bi bi-star-fill text-warning"></i>
                             <i class="bi bi-star-fill text-warning"></i>
                             <i class="bi bi-star-fill text-warning"></i>
                             <i class="bi bi-star-fill text-warning"></i>
                             <i class="bi bi-star-fill text-warning"></i>
                         </div>
-                        <p class="text-secondary mb-0">"As an agency, QRFlow allows us to offer premium QR services to
+                        <p class="text-secondary mb-0 testimonial-quote">"As an agency, QRFlow allows us to offer premium QR services to
                             all our clients. The white-label dashboard is perfect for our brand."</p>
                     </div>
                 </div>
@@ -256,7 +330,7 @@
                     <div class="row g-4">
                         <div class="col-12">
                             <div class="d-flex align-items-start">
-                                <div class="bg-primary-accent rounded-circle p-3 text-dark me-4"
+                                <div class="bg-primary-accent rounded-circle p-3 text-dark me-4 process-step-number"
                                     style="min-width: 60px; height: 60px;">
                                     <span class="fw-bold">01</span>
                                 </div>
@@ -269,7 +343,7 @@
                         </div>
                         <div class="col-12">
                             <div class="d-flex align-items-start">
-                                <div class="bg-primary-accent rounded-circle p-3 text-dark me-4"
+                                <div class="bg-primary-accent rounded-circle p-3 text-dark me-4 process-step-number"
                                     style="min-width: 60px; height: 60px;">
                                     <span class="fw-bold">02</span>
                                 </div>
@@ -282,7 +356,7 @@
                         </div>
                         <div class="col-12">
                             <div class="d-flex align-items-start">
-                                <div class="bg-primary-accent rounded-circle p-3 text-dark me-4"
+                                <div class="bg-primary-accent rounded-circle p-3 text-dark me-4 process-step-number"
                                     style="min-width: 60px; height: 60px;">
                                     <span class="fw-bold">03</span>
                                 </div>
@@ -299,17 +373,17 @@
                     <div class="glass-card p-5 text-center">
                         <div class="row g-4">
                             <div class="col-6">
-                                <div class="glass-card p-4 h-100">
+                                <div class="glass-card p-4 h-100 process-kpi-card">
                                     <i class="bi bi-graph-up-arrow fs-1 text-primary-accent mb-3 d-block"></i>
-                                    <h3 class="h4 mb-1">98%</h3>
-                                    <p class="text-secondary text-sm">Client Satisfaction</p>
+                                    <h3 class="h4 mb-1 process-kpi-value">98%</h3>
+                                    <p class="text-secondary text-sm process-kpi-label">Client Satisfaction</p>
                                 </div>
                             </div>
                             <div class="col-6">
-                                <div class="glass-card p-4 h-100">
+                                <div class="glass-card p-4 h-100 process-kpi-card">
                                     <i class="bi bi-clock-history fs-1 text-primary-accent mb-3 d-block"></i>
-                                    <h3 class="h4 mb-1">2 Weeks</h3>
-                                    <p class="text-secondary text-sm">Avg. Launch Time</p>
+                                    <h3 class="h4 mb-1 process-kpi-value">2 Weeks</h3>
+                                    <p class="text-secondary text-sm process-kpi-label">Avg. Launch Time</p>
                                 </div>
                             </div>
                             <div class="col-12">
@@ -383,3 +457,4 @@
 </body>
 
 </html>
+

@@ -1,20 +1,40 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pricing Plans | QRFlow Marketing</title>
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <style>
+        @media (min-width: 992px) and (max-width: 1199.98px) {
+            .pricing-plans-row .pricing-feature-list li {
+                display: grid !important;
+                grid-template-columns: 22px 1fr;
+                column-gap: 10px;
+                align-items: start !important;
+            }
+
+            .pricing-plans-row .pricing-feature-list li i {
+                margin-right: 0 !important;
+                margin-top: 2px;
+            }
+
+            .pricing-plans-row .pricing-feature-list li span {
+                display: block;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+    <nav class="navbar navbar-expand-xl navbar-custom sticky-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
                 <img src="assets/images/logo.png" alt="QR Logo" class="me-2">
@@ -42,12 +62,12 @@
                         <i class="bi bi-box-arrow-in-right"></i>
                     </a>
                     <div class="d-flex gap-2">
-                        <button class="btn btn-link text-white p-0" id="theme-toggle" title="Toggle Theme">
-                            <i class="bi bi-moon-stars"></i>
-                        </button>
-                        <button class="btn btn-link text-white p-0" id="rtl-toggle" title="Toggle RTL">
-                            <i class="bi bi-translate"></i>
-                        </button>
+                        <button class="btn btn-outline-custom btn-sm d-flex align-items-center justify-content-center nav-toggle-btn" id="theme-toggle" title="Toggle Theme">
+                <i class="bi bi-moon-stars"></i>
+            </button>
+                        <button class="btn btn-outline-custom btn-sm d-flex align-items-center justify-content-center nav-toggle-btn" id="rtl-toggle" title="RTL">
+                <i class="bi bi-translate"></i>
+            </button>
                     </div>
                 </div>
             </div>
@@ -60,7 +80,7 @@
             <div class="text-center mb-5">
                 <h1 class="display-3 fw-bold mb-4">Plans Built for <br> <span class="text-gradient">Every Stage</span>
                 </h1>
-                <p class="text-secondary lead max-w-600 mx-auto mb-5 px-3">From single-QR projects to global marketing
+                <p class="text-secondary lead max-w-600 mx-auto mb-4 px-3">From single-QR projects to global marketing
                     agencies. Choose the plan that fits your growth.</p>
                 <div class="d-flex justify-content-center align-items-center gap-3 mb-5">
                     <span class="text-white">Monthly</span>
@@ -73,26 +93,26 @@
                 </div>
             </div>
 
-            <div class="row g-4 justify-content-center">
+            <div class="row g-4 justify-content-center pricing-plans-row">
                 <!-- Free Plan -->
                 <div class="col-lg-4">
                     <div class="glass-card p-5 h-100 d-flex flex-column">
                         <div style="height: 40px;" class="mb-4"></div> <!-- Badge Spacer -->
                         <h3 class="h5 text-white mb-4">Starter</h3>
                         <div class="display-4 fw-bold mb-4 text-white">$0</div>
-                        <p class="text-secondary text-sm mb-5">Free forever for personal use.</p>
+                        <p class="text-secondary text-sm mb-4">Free forever for personal use.</p>
                         <hr class="border-color mb-5">
-                        <ul class="list-unstyled text-start mb-5">
+                        <ul class="list-unstyled text-start mb-5 pricing-feature-list">
                             <li class="mb-3 d-flex align-items-center"><i
-                                    class="bi bi-check-circle-fill text-primary-accent me-2"></i> 5 Dynamic QR Codes
+                                    class="bi bi-check-circle-fill text-primary-accent me-2"></i><span>5 Dynamic QR Codes</span>
                             </li>
                             <li class="mb-3 d-flex align-items-center"><i
-                                    class="bi bi-check-circle-fill text-primary-accent me-2"></i> 1,000 Scans/Month</li>
+                                    class="bi bi-check-circle-fill text-primary-accent me-2"></i><span>1,000 Scans/Month</span></li>
                             <li class="mb-3 d-flex align-items-center"><i
-                                    class="bi bi-check-circle-fill text-primary-accent me-2"></i> Standard QR Design
+                                    class="bi bi-check-circle-fill text-primary-accent me-2"></i><span>Standard QR Design</span>
                             </li>
                             <li class="mb-3 text-secondary d-flex align-items-center"><i
-                                    class="bi bi-dash-circle me-2"></i> No Analytics</li>
+                                    class="bi bi-dash-circle me-2"></i><span>No Analytics</span></li>
                         </ul>
                         <div class="mt-auto">
                             <a href="register.html" class="btn btn-outline-custom w-100">Get Started</a>
@@ -105,28 +125,28 @@
                     <div class="glass-card p-5 h-100 border-primary-accent d-flex flex-column"
                         style="box-shadow: 0 0 40px rgba(94, 234, 212, 0.1);">
                         <div class="text-center mb-4" style="height: 40px;">
-                            <div class="badge bg-primary-accent text-dark px-3 py-2">MOST POPULAR</div>
+                            <div class="badge px-3 py-2" style="background-color: var(--primary-accent); color: #0b1020;">MOST POPULAR</div>
                         </div>
                         <h3 class="h5 text-white mb-4">Business Pro</h3>
                         <div class="display-4 fw-bold mb-4 text-white">$29<span
                                 class="fs-5 text-secondary fw-normal">/mo</span>
                         </div>
-                        <p class="text-secondary text-sm mb-5">Advanced tracking & unlimited edits.</p>
+                        <p class="text-secondary text-sm mb-4">Advanced tracking & unlimited edits.</p>
                         <hr class="border-color mb-5">
-                        <ul class="list-unstyled text-start mb-5">
+                        <ul class="list-unstyled text-start mb-5 pricing-feature-list">
                             <li class="mb-3 d-flex align-items-center"><i
-                                    class="bi bi-check-circle-fill text-primary-accent me-2"></i> Unlimited Dynamic QRs
+                                    class="bi bi-check-circle-fill text-primary-accent me-2"></i><span>Unlimited Dynamic QRs</span>
                             </li>
                             <li class="mb-3 d-flex align-items-center"><i
-                                    class="bi bi-check-circle-fill text-primary-accent me-2"></i> 50k Scans/Month</li>
+                                    class="bi bi-check-circle-fill text-primary-accent me-2"></i><span>50k Scans/Month</span></li>
                             <li class="mb-3 d-flex align-items-center"><i
-                                    class="bi bi-check-circle-fill text-primary-accent me-2"></i> Full Branded
-                                Customization</li>
+                                    class="bi bi-check-circle-fill text-primary-accent me-2"></i><span>Full Branded
+                                    Customization</span></li>
                             <li class="mb-3 d-flex align-items-center"><i
-                                    class="bi bi-check-circle-fill text-primary-accent me-2"></i> Real-time Analytics
+                                    class="bi bi-check-circle-fill text-primary-accent me-2"></i><span>Real-time Analytics</span>
                             </li>
                             <li class="mb-3 d-flex align-items-center"><i
-                                    class="bi bi-check-circle-fill text-primary-accent me-2"></i> Export to SVG/PDF</li>
+                                    class="bi bi-check-circle-fill text-primary-accent me-2"></i><span>Export to SVG/PDF</span></li>
                         </ul>
                         <div class="mt-auto">
                             <a href="register.html" class="btn btn-primary-custom w-100">Go Pro Now</a>
@@ -140,20 +160,20 @@
                         <div style="height: 40px;" class="mb-4"></div> <!-- Badge Spacer -->
                         <h3 class="h5 text-white mb-4">Enterprise</h3>
                         <div class="display-4 fw-bold mb-4 text-white">Custom</div>
-                        <p class="text-secondary text-sm mb-5">Global scale with white-label features.</p>
+                        <p class="text-secondary text-sm mb-4">Global scale with white-label features.</p>
                         <hr class="border-color mb-5">
-                        <ul class="list-unstyled text-start mb-5">
+                        <ul class="list-unstyled text-start mb-5 pricing-feature-list">
                             <li class="mb-3 d-flex align-items-center"><i
-                                    class="bi bi-check-circle-fill text-primary-accent me-2"></i> Unlimited Everything
+                                    class="bi bi-check-circle-fill text-primary-accent me-2"></i><span>Unlimited Everything</span>
                             </li>
                             <li class="mb-3 d-flex align-items-center"><i
-                                    class="bi bi-check-circle-fill text-primary-accent me-2"></i> White-label Dashboard
+                                    class="bi bi-check-circle-fill text-primary-accent me-2"></i><span>White-label Dashboard</span>
                             </li>
                             <li class="mb-3 d-flex align-items-center"><i
-                                    class="bi bi-check-circle-fill text-primary-accent me-2"></i> Priority API Support
+                                    class="bi bi-check-circle-fill text-primary-accent me-2"></i><span>Priority API Support</span>
                             </li>
                             <li class="mb-3 d-flex align-items-center"><i
-                                    class="bi bi-check-circle-fill text-primary-accent me-2"></i> Account Manager</li>
+                                    class="bi bi-check-circle-fill text-primary-accent me-2"></i><span>Account Manager</span></li>
                         </ul>
                         <div class="mt-auto">
                             <a href="contact.html" class="btn btn-outline-custom w-100">Contact Sales</a>
@@ -214,13 +234,13 @@
                     <i class="bi bi-shield-lock-fill text-primary-accent display-4"></i>
                 </div>
                 <h3 class="h2 mb-3">Secure Payment Guarantee</h3>
-                <p class="text-secondary mb-5">All premium plans include a 14-day no-questions-asked refund policy. We
+                <p class="text-secondary mb-4">All premium plans include a 14-day no-questions-asked refund policy. We
                     partner with world-class payment processors to keep your data safe.</p>
                 <div class="d-flex justify-content-center align-items-center gap-5 opacity-75 grayscale-hover">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Stripe_Logo%2C_revised_2016.svg"
                         height="25" alt="Stripe">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" height="25" alt="PayPal">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" height="20"
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/320px-Visa_Inc._logo.svg.png" height="20"
                         alt="Visa">
                 </div>
             </div>
@@ -231,19 +251,35 @@
     <section class="py-5 mt-5">
         <div class="container py-5">
             <h2 class="display-5 text-center mb-5">Common Questions</h2>
-            <div class="row g-4 max-w-600 mx-auto">
-                <div class="col-12">
-                    <div class="glass-card p-4">
-                        <h4 class="h5 mb-3">Can I change my QR destination after printing?</h4>
-                        <p class="text-secondary mb-0">Yes! That is the power of our Dynamic QR technology. The code
-                            stays the same, but you can update where it points to instantly from your dashboard.</p>
+            <div class="accordion max-w-600 mx-auto" id="pricingFaqAccordion">
+                <div class="accordion-item glass-card mb-3 border-color">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed bg-transparent text-white" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#faqOne" aria-expanded="false"
+                            aria-controls="faqOne">
+                            Can I change my QR destination after printing?
+                        </button>
+                    </h2>
+                    <div id="faqOne" class="accordion-collapse collapse" data-bs-parent="#pricingFaqAccordion">
+                        <div class="accordion-body text-secondary">
+                            Yes! That is the power of our Dynamic QR technology. The code stays the same, but you can
+                            update where it points to instantly from your dashboard.
+                        </div>
                     </div>
                 </div>
-                <div class="col-12">
-                    <div class="glass-card p-4">
-                        <h4 class="h5 mb-3">Do my QR codes expire?</h4>
-                        <p class="text-secondary mb-0">Dynamic QR codes require an active subscription. Static QR codes
-                            created on our platform are free forever and never expire.</p>
+                <div class="accordion-item glass-card border-color">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed bg-transparent text-white" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#faqTwo" aria-expanded="false"
+                            aria-controls="faqTwo">
+                            Do my QR codes expire?
+                        </button>
+                    </h2>
+                    <div id="faqTwo" class="accordion-collapse collapse" data-bs-parent="#pricingFaqAccordion">
+                        <div class="accordion-body text-secondary">
+                            Dynamic QR codes require an active subscription. Static QR codes created on our platform
+                            are free forever and never expire.
+                        </div>
                     </div>
                 </div>
             </div>
@@ -307,3 +343,4 @@
 </body>
 
 </html>
+

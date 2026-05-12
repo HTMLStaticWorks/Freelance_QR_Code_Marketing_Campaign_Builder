@@ -9,9 +9,14 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Chart.js Initialization
+    let engagementChartInstance = null;
+    const initialIsLightTheme = localStorage.getItem('theme') === 'light';
+    const initialEngagementTickColor = initialIsLightTheme ? '#334155' : '#b8c0d4';
+    const initialEngagementGridColor = initialIsLightTheme ? 'rgba(15, 23, 42, 0.12)' : 'rgba(255, 255, 255, 0.05)';
+
     const engagementCtx = document.getElementById('engagementChart');
     if (engagementCtx) {
-        new Chart(engagementCtx, {
+        engagementChartInstance = new Chart(engagementCtx, {
             type: 'line',
             data: {
                 labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
@@ -38,12 +43,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 },
                 scales: {
                     y: {
-                        grid: { color: 'rgba(255, 255, 255, 0.05)' },
-                        ticks: { color: '#b8c0d4' }
+                        grid: { color: initialEngagementGridColor },
+                        ticks: { color: initialEngagementTickColor }
                     },
                     x: {
                         grid: { display: false },
-                        ticks: { color: '#b8c0d4' }
+                        ticks: { color: initialEngagementTickColor }
                     }
                 }
             }
@@ -101,6 +106,15 @@ document.addEventListener('DOMContentLoaded', function () {
                 icon.classList.replace('bi-moon-stars', 'bi-sun');
             } else {
                 icon.classList.replace('bi-sun', 'bi-moon-stars');
+            }
+
+            if (engagementChartInstance) {
+                const tickColor = isLight ? '#334155' : '#b8c0d4';
+                const gridColor = isLight ? 'rgba(15, 23, 42, 0.12)' : 'rgba(255, 255, 255, 0.05)';
+                engagementChartInstance.options.scales.y.ticks.color = tickColor;
+                engagementChartInstance.options.scales.x.ticks.color = tickColor;
+                engagementChartInstance.options.scales.y.grid.color = gridColor;
+                engagementChartInstance.update();
             }
         });
     }

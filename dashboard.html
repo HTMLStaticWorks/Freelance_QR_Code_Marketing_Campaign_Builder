@@ -1,15 +1,68 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard | QRFlow Marketing</title>
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark-mode.css">
     <link rel="stylesheet" href="assets/css/rtl.css">
+    <style>
+        @media (min-width: 992px) and (max-width: 1199.98px) {
+            #overview-section .overview-metric-card {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+            }
+
+            #overview-section .overview-metric-label {
+                min-height: 48px;
+            }
+
+            #overview-section .overview-metric-change {
+                min-height: 48px;
+            }
+
+            #campaigns-section .campaign-stage-card {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+            }
+
+            #campaigns-section .campaign-stage-body {
+                min-height: 140px;
+            }
+
+            #campaigns-section .campaign-stage-footer {
+                margin-top: auto;
+            }
+
+            #integrations-section .integration-app-card {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+            }
+
+            #integrations-section .integration-app-title {
+                min-height: 56px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            #integrations-section .integration-app-copy {
+                min-height: 56px;
+            }
+
+            #integrations-section .integration-app-action {
+                margin-top: auto;
+            }
+        }
+    </style>
 </head>
 
 <body class="bg-primary-bg">
@@ -46,15 +99,8 @@
             </a>
         </nav>
 
-        <div class="mt-auto pt-5">
-            <div class="glass-card p-3">
-                <div class="d-flex align-items-center mb-2">
-                    <div class="bg-primary-accent rounded-circle p-1 me-2" style="width: 10px; height: 10px;"></div>
-                    <span class="text-sm">Pro Plan Active</span>
-                </div>
-                <p class="text-sm text-secondary mb-0">85% of monthly scans used.</p>
-            </div>
-        </div>
+        
+       
     </aside>
 
     <!-- Main Content -->
@@ -70,12 +116,12 @@
             </div>
             <div class="d-flex align-items-center gap-3">
                 <div class="d-flex gap-2 ms-2">
-                    <button class="btn btn-link text-white p-0" id="theme-toggle" title="Toggle Theme">
-                        <i class="bi bi-moon-stars"></i>
-                    </button>
-                    <button class="btn btn-link text-white p-0" id="rtl-toggle" title="Toggle RTL">
-                        <i class="bi bi-translate"></i>
-                    </button>
+                    <button class="btn btn-outline-custom btn-sm d-flex align-items-center justify-content-center nav-toggle-btn" id="theme-toggle" title="Toggle Theme">
+                <i class="bi bi-moon-stars"></i>
+            </button>
+                    <button class="btn btn-outline-custom btn-sm d-flex align-items-center justify-content-center nav-toggle-btn" id="rtl-toggle" title="RTL">
+                <i class="bi bi-translate"></i>
+            </button>
                 </div>
                 <img src="https://ui-avatars.com/api/?name=Freelance+Designer&background=5eead4&color=0b1020"
                     class="rounded-circle" width="40" alt="Avatar">
@@ -86,45 +132,45 @@
             <!-- Stats Grid -->
             <div class="row g-4 mb-5">
                 <div class="col-md-3">
-                    <div class="dashboard-card">
+                    <div class="dashboard-card overview-metric-card">
                         <div class="stat-icon"
                             style="background: rgba(94, 234, 212, 0.1); color: var(--primary-accent);">
                             <i class="bi bi-qr-code-scan"></i>
                         </div>
-                        <p class="text-secondary text-sm mb-1">Total Scans</p>
+                        <p class="text-secondary text-sm mb-1 overview-metric-label">Total Scans</p>
                         <h3 class="mb-0">124.5k</h3>
-                        <p class="text-success text-sm mb-0 mt-2"><i class="bi bi-arrow-up"></i> 12.5% vs last month</p>
+                        <p class="text-success text-sm mb-0 mt-2 overview-metric-change"><i class="bi bi-arrow-up"></i> 12.5% vs last month</p>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="dashboard-card">
+                    <div class="dashboard-card overview-metric-card">
                         <div class="stat-icon"
                             style="background: rgba(124, 58, 237, 0.1); color: var(--secondary-accent);">
                             <i class="bi bi-people"></i>
                         </div>
-                        <p class="text-secondary text-sm mb-1">Unique Scanners</p>
+                        <p class="text-secondary text-sm mb-1 overview-metric-label">Unique Scanners</p>
                         <h3 class="mb-0">84.2k</h3>
-                        <p class="text-success text-sm mb-0 mt-2"><i class="bi bi-arrow-up"></i> 8.1% vs last month</p>
+                        <p class="text-success text-sm mb-0 mt-2 overview-metric-change"><i class="bi bi-arrow-up"></i> 8.1% vs last month</p>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="dashboard-card">
+                    <div class="dashboard-card overview-metric-card">
                         <div class="stat-icon" style="background: rgba(34, 197, 94, 0.1); color: var(--success);">
                             <i class="bi bi-cursor"></i>
                         </div>
-                        <p class="text-secondary text-sm mb-1">Conversion Rate</p>
+                        <p class="text-secondary text-sm mb-1 overview-metric-label">Conversion Rate</p>
                         <h3 class="mb-0">18.4%</h3>
-                        <p class="text-danger text-sm mb-0 mt-2"><i class="bi bi-arrow-down"></i> 2.3% vs last month</p>
+                        <p class="text-danger text-sm mb-0 mt-2 overview-metric-change"><i class="bi bi-arrow-down"></i> 2.3% vs last month</p>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="dashboard-card">
+                    <div class="dashboard-card overview-metric-card">
                         <div class="stat-icon" style="background: rgba(245, 158, 11, 0.1); color: var(--warning);">
                             <i class="bi bi-megaphone"></i>
                         </div>
-                        <p class="text-secondary text-sm mb-1">Active Campaigns</p>
+                        <p class="text-secondary text-sm mb-1 overview-metric-label">Active Campaigns</p>
                         <h3 class="mb-0">12</h3>
-                        <p class="text-secondary text-sm mb-0 mt-2">2 expiring soon</p>
+                        <p class="text-secondary text-sm mb-0 mt-2 overview-metric-change">2 expiring soon</p>
                     </div>
                 </div>
             </div>
@@ -244,38 +290,38 @@
             </div>
             <div class="row g-4">
                 <div class="col-md-6 col-lg-4">
-                    <div class="dashboard-card">
+                    <div class="dashboard-card campaign-stage-card">
                         <div class="d-flex justify-content-between mb-4">
                             <span class="status-badge status-active">Active</span>
                             <i class="bi bi-three-dots-vertical text-secondary"></i>
                         </div>
-                        <div class="text-center mb-4">
+                        <div class="text-center mb-4 campaign-stage-body">
                             <div class="glass-card d-inline-block p-3 mb-3">
                                 <i class="bi bi-qr-code fs-1 text-gradient"></i>
                             </div>
                             <h4 class="h5">Summer Sale 2026</h4>
                             <p class="text-secondary text-sm">Last scan 2 mins ago</p>
                         </div>
-                        <div class="border-top border-color pt-3 mt-4 d-flex justify-content-between">
+                        <div class="border-top border-color pt-3 mt-4 d-flex justify-content-between campaign-stage-footer">
                             <span class="text-secondary text-sm">Total Scans:</span>
                             <span class="fw-bold">12,450</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
-                    <div class="dashboard-card">
+                    <div class="dashboard-card campaign-stage-card">
                         <div class="d-flex justify-content-between mb-4">
                             <span class="status-badge status-active">Active</span>
                             <i class="bi bi-three-dots-vertical text-secondary"></i>
                         </div>
-                        <div class="text-center mb-4">
+                        <div class="text-center mb-4 campaign-stage-body">
                             <div class="glass-card d-inline-block p-3 mb-3">
                                 <i class="bi bi-qr-code fs-1 text-gradient"></i>
                             </div>
                             <h4 class="h5">Coffee Loyalty</h4>
                             <p class="text-secondary text-sm">Last scan 15 mins ago</p>
                         </div>
-                        <div class="border-top border-color pt-3 mt-4 d-flex justify-content-between">
+                        <div class="border-top border-color pt-3 mt-4 d-flex justify-content-between campaign-stage-footer">
                             <span class="text-secondary text-sm">Total Scans:</span>
                             <span class="fw-bold">8,210</span>
                         </div>
@@ -310,7 +356,7 @@
                             <li
                                 class="d-flex justify-content-between align-items-center mb-4 pb-3 border-bottom border-color">
                                 <div class="d-flex align-items-center">
-                                    <span class="me-3 fs-3">🇺🇸</span>
+                                    <span class="me-3 fs-3">ðŸ‡ºðŸ‡¸</span>
                                     <div>
                                         <div class="fw-bold">United States</div>
                                         <div class="text-secondary text-sm">New York, CA, Texas</div>
@@ -320,7 +366,7 @@
                             </li>
                             <li class="d-flex justify-content-between align-items-center">
                                 <div class="d-flex align-items-center">
-                                    <span class="me-3 fs-3">🇬🇧</span>
+                                    <span class="me-3 fs-3">ðŸ‡¬ðŸ‡§</span>
                                     <div>
                                         <div class="fw-bold">United Kingdom</div>
                                         <div class="text-secondary text-sm">London, Manchester</div>
@@ -347,36 +393,36 @@
             <h2 class="h3 mb-5">Connected Apps</h2>
             <div class="row g-4">
                 <div class="col-md-4">
-                    <div class="dashboard-card text-center">
+                    <div class="dashboard-card text-center integration-app-card">
                         <div class="bg-white rounded-circle p-3 d-inline-block mb-4" style="width: 70px; height: 70px;">
                             <img src="https://cdn.worldvectorlogo.com/logos/zapier.svg" class="img-fluid" alt="Zapier">
                         </div>
-                        <h3 class="h5 mb-3">Zapier</h3>
-                        <p class="text-secondary text-sm mb-4">Automate workflows with 5,000+ apps.</p>
-                        <button class="btn btn-outline-custom btn-sm w-100">Connect</button>
+                        <h3 class="h5 mb-3 integration-app-title">Zapier</h3>
+                        <p class="text-secondary text-sm mb-4 integration-app-copy">Automate workflows with 5,000+ apps.</p>
+                        <button class="btn btn-outline-custom btn-sm w-100 integration-app-action">Connect</button>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="dashboard-card text-center">
+                    <div class="dashboard-card text-center integration-app-card">
                         <div class="bg-white rounded-circle p-3 d-inline-block mb-4" style="width: 70px; height: 70px;">
                             <img src="https://cdn.worldvectorlogo.com/logos/google-analytics-4.svg" class="img-fluid"
                                 alt="GA4">
                         </div>
-                        <h3 class="h5 mb-3">Google Analytics</h3>
-                        <p class="text-secondary text-sm mb-4">Track scans in your GA4 dashboard.</p>
+                        <h3 class="h5 mb-3 integration-app-title">Google Analytics</h3>
+                        <p class="text-secondary text-sm mb-4 integration-app-copy">Track scans in your GA4 dashboard.</p>
                         <button
-                            class="btn btn-outline-custom btn-sm w-100 border-primary-accent text-primary-accent">Configured</button>
+                            class="btn btn-outline-custom btn-sm w-100 border-primary-accent text-primary-accent integration-app-action">Configured</button>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="dashboard-card text-center">
+                    <div class="dashboard-card text-center integration-app-card">
                         <div class="bg-white rounded-circle p-3 d-inline-block mb-4" style="width: 70px; height: 70px;">
                             <img src="https://cdn.worldvectorlogo.com/logos/mailchimp-freddie-icon.svg"
                                 class="img-fluid" alt="Mailchimp">
                         </div>
-                        <h3 class="h5 mb-3">Mailchimp</h3>
-                        <p class="text-secondary text-sm mb-4">Add scan leads to your email lists.</p>
-                        <button class="btn btn-outline-custom btn-sm w-100">Connect</button>
+                        <h3 class="h5 mb-3 integration-app-title">Mailchimp</h3>
+                        <p class="text-secondary text-sm mb-4 integration-app-copy">Add scan leads to your email lists.</p>
+                        <button class="btn btn-outline-custom btn-sm w-100 integration-app-action">Connect</button>
                     </div>
                 </div>
             </div>
@@ -466,3 +512,4 @@
 </body>
 
 </html>
+

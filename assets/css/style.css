@@ -99,6 +99,15 @@ h6 {
     color: var(--primary-accent);
 }
 
+.nav-toggle-btn {
+    width: 56px;
+    min-width: 56px;
+    height: 40px;
+    min-height: 40px;
+    padding: 8px 10px;
+    gap: 0;
+}
+
 /* Navbar */
 .navbar-custom {
     background: rgba(11, 16, 32, 0.8);
@@ -152,6 +161,13 @@ h6 {
     border-radius: 30px;
     border: 1px solid var(--border-color);
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+}
+
+.premium-brand-img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
 }
 
 /* Animations */
@@ -346,4 +362,10 @@ h6 {
 .social-links a:hover {
     color: var(--primary-accent) !important;
     transform: translateY(-5px);
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .story-quote {
+        min-height: 108px;
+    }
 }

@@ -1,10 +1,11 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QR Campaign Builder | Smart QR Marketing Platform</title>
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
     <meta name="description"
         content="Build dynamic QR marketing campaigns, track scans in real-time, and optimize engagement with premium branded QR experiences.">
 
@@ -24,7 +25,7 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+    <nav class="navbar navbar-expand-xl navbar-custom sticky-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
                 <img src="assets/images/logo.png" alt="QR Logo" class="me-2">
@@ -53,12 +54,12 @@
                         <i class="bi bi-box-arrow-in-right"></i>
                     </a>
                     <div class="d-flex gap-2">
-                        <button class="btn btn-link text-white p-0" id="theme-toggle" title="Toggle Theme">
-                            <i class="bi bi-moon-stars"></i>
-                        </button>
-                        <button class="btn btn-link text-white p-0" id="rtl-toggle" title="Toggle RTL">
-                            <i class="bi bi-translate"></i>
-                        </button>
+                        <button class="btn btn-outline-custom btn-sm d-flex align-items-center justify-content-center nav-toggle-btn" id="theme-toggle" title="Toggle Theme">
+                <i class="bi bi-moon-stars"></i>
+            </button>
+                        <button class="btn btn-outline-custom btn-sm d-flex align-items-center justify-content-center nav-toggle-btn" id="rtl-toggle" title="RTL">
+                <i class="bi bi-translate"></i>
+            </button>
                     </div>
                 </div>
             </div>
@@ -171,13 +172,13 @@
                         <div class="col-6">
                             <div class="glass-card p-2">
                                 <img src="https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80&w=400"
-                                    class="img-fluid rounded-4" alt="Retail">
+                                    class="img-fluid rounded-4 premium-brand-img" alt="Retail">
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="glass-card p-2">
                                 <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=400"
-                                    class="img-fluid rounded-4" alt="Restaurant">
+                                    class="img-fluid rounded-4 premium-brand-img" alt="Restaurant">
                             </div>
                         </div>
                     </div>
@@ -233,8 +234,8 @@
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="glass-card p-5 h-100 text-center">
-                        <div class="mb-4 mx-auto d-flex align-items-center justify-content-center bg-primary-accent text-dark fw-bold rounded-circle shadow"
-                            style="width: 70px; height: 70px; font-size: 1.5rem;">1</div>
+                        <div class="mb-4 mx-auto d-flex align-items-center justify-content-center fw-bold rounded-circle shadow"
+                            style="width: 70px; height: 70px; font-size: 1.5rem; background-color: var(--primary-accent); color: #0b1020;">1</div>
                         <h4 class="h5 mb-3">Create & Brand</h4>
                         <p class="text-secondary mb-0">Input your URL and customize the QR with your brand colors,
                             shapes, and official logo.</p>
@@ -242,17 +243,17 @@
                 </div>
                 <div class="col-md-4">
                     <div class="glass-card p-5 h-100 text-center">
-                        <div class="mb-4 mx-auto d-flex align-items-center justify-content-center bg-primary-accent text-dark fw-bold rounded-circle shadow"
-                            style="width: 70px; height: 70px; font-size: 1.5rem;">2</div>
+                        <div class="mb-4 mx-auto d-flex align-items-center justify-content-center fw-bold rounded-circle shadow"
+                            style="width: 70px; height: 70px; font-size: 1.5rem; background-color: var(--primary-accent); color: #0b1020;">2</div>
                         <h4 class="h5 mb-3">Deploy & Distribute</h4>
-                        <p class="text-secondary mb-0">Print your high-resolution QR on any physical asset—from flyers
+                        <p class="text-secondary mb-0">Print your high-resolution QR on any physical assetâ€”from flyers
                             to digital billboards.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="glass-card p-5 h-100 text-center">
-                        <div class="mb-4 mx-auto d-flex align-items-center justify-content-center bg-primary-accent text-dark fw-bold rounded-circle shadow"
-                            style="width: 70px; height: 70px; font-size: 1.5rem;">3</div>
+                        <div class="mb-4 mx-auto d-flex align-items-center justify-content-center fw-bold rounded-circle shadow"
+                            style="width: 70px; height: 70px; font-size: 1.5rem; background-color: var(--primary-accent); color: #0b1020;">3</div>
                         <h4 class="h5 mb-3">Track & Optimize</h4>
                         <p class="text-secondary mb-0">Monitor scans in real-time and update destinations instantly
                             without ever re-printing.</p>
@@ -275,8 +276,9 @@
                     <div class="glass-card p-5 h-100 d-flex flex-column">
                         <div style="height: 40px;" class="mb-4"></div> <!-- Badge Spacer -->
                         <h4 class="h5 text-white mb-4">Starter</h4>
-                        <div class="display-4 fw-bold mb-4 text-white">$0 <span
+                        <div class="display-4 fw-bold mb-4 text-white" style="min-height: 72px; display: flex; align-items: flex-end;">$0 <span
                                 class="fs-6 text-secondary fw-normal">/mo</span></div>
+                        <div style="min-height: 72px;" class="mb-5"></div>
                         <ul class="list-unstyled mb-5 text-secondary">
                             <li class="mb-3 d-flex align-items-center gap-2"><i
                                     class="bi bi-check2 text-primary-accent fs-5"></i> 5 Dynamic QR Codes</li>
@@ -297,8 +299,9 @@
                             <div class="badge bg-primary-accent text-dark px-3 py-2">MOST POPULAR</div>
                         </div>
                         <h4 class="h5 text-white mb-4">Business Pro</h4>
-                        <div class="display-4 fw-bold mb-4 text-white">$29 <span
+                        <div class="display-4 fw-bold mb-4 text-white" style="min-height: 72px; display: flex; align-items: flex-end;">$29 <span
                                 class="fs-6 text-secondary fw-normal">/mo</span></div>
+                        <div style="min-height: 72px;" class="mb-5"></div>
                         <ul class="list-unstyled mb-5 text-secondary">
                             <li class="mb-3 d-flex align-items-center gap-2"><i
                                     class="bi bi-check2 text-primary-accent fs-5"></i> Unlimited dynamic QRs</li>
@@ -316,9 +319,8 @@
                     <div class="glass-card p-5 h-100 d-flex flex-column">
                         <div style="height: 40px;" class="mb-4"></div> <!-- Badge Spacer -->
                         <h4 class="h5 text-white mb-4">Enterprise</h4>
-                        <div class="display-4 fw-bold mb-4 text-white">Custom</div>
-                        <p class="text-secondary mb-5">For large scale marketing agencies and corporate brands requiring
-                            white-label solutions.</p>
+                        <div class="display-4 fw-bold mb-4 text-white" style="min-height: 72px; display: flex; align-items: flex-end;">Custom</div>
+                        <div style="min-height: 72px;" class="mb-5"></div>
                         <ul class="list-unstyled mb-5 text-secondary">
                             <li class="mb-3 d-flex align-items-center gap-2"><i
                                     class="bi bi-check2 text-primary-accent fs-5"></i> Dedicated Account Manager</li>
@@ -389,3 +391,4 @@
 </body>
 
 </html>
+
