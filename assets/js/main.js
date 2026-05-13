@@ -136,6 +136,32 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // Back to Top
+    let backToTopButton = document.getElementById('back-to-top');
+    if (!backToTopButton) {
+        backToTopButton = document.createElement('button');
+        backToTopButton.type = 'button';
+        backToTopButton.id = 'back-to-top';
+        backToTopButton.className = 'back-to-top';
+        backToTopButton.setAttribute('aria-label', 'Back to top');
+        backToTopButton.innerHTML = '<i class="bi bi-arrow-up"></i>';
+        document.body.appendChild(backToTopButton);
+    }
+
+    const toggleBackToTop = () => {
+        if (window.scrollY > 280) {
+            backToTopButton.classList.add('show');
+        } else {
+            backToTopButton.classList.remove('show');
+        }
+    };
+
+    backToTopButton.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    window.addEventListener('scroll', toggleBackToTop, { passive: true });
+    toggleBackToTop();
+
     // Scroll Animations
     const observerOptions = {
         threshold: 0.1

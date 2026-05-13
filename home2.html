@@ -17,9 +17,50 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark-mode.css">
     <link rel="stylesheet" href="assets/css/rtl.css">
+    <style>
+        @media (max-width: 1024px) {
+            html,
+            body.home2-page {
+                width: 100%;
+                max-width: 100%;
+                overflow-x: hidden;
+            }
+
+            body.home2-page .container {
+                max-width: 100%;
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
+            body.home2-page section {
+                text-align: center;
+            }
+
+            body.home2-page section .row {
+                justify-content: center;
+            }
+
+            body.home2-page section .max-w-600 {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            body.home2-page section .d-flex.align-items-start {
+                flex-direction: column;
+                align-items: center !important;
+                text-align: center;
+            }
+
+            body.home2-page section .d-flex.align-items-start .feature-icon,
+            body.home2-page section .d-flex.align-items-start .badge {
+                margin-right: 0 !important;
+                margin-bottom: 0.75rem;
+            }
+        }
+    </style>
 </head>
 
-<body>
+<body class="home2-page">
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-xl navbar-custom sticky-top">
@@ -606,4 +647,3 @@
 </body>
 
 </html>
-

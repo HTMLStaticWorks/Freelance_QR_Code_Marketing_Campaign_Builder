@@ -133,6 +133,53 @@ h6 {
     color: var(--primary-accent) !important;
 }
 
+@media (min-width: 1200px) {
+    .navbar-custom .navbar-collapse {
+        align-items: center;
+    }
+
+    .navbar-custom .navbar-nav .nav-item {
+        flex-shrink: 0;
+    }
+
+    .navbar-custom .navbar-nav .nav-link {
+        white-space: nowrap;
+    }
+}
+
+.back-to-top {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    width: 46px;
+    height: 46px;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    background: rgba(18, 26, 47, 0.9);
+    color: var(--text-primary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    transition: var(--transition);
+}
+
+.back-to-top:hover {
+    border-color: var(--primary-accent);
+    color: var(--primary-accent);
+    background: rgba(18, 26, 47, 1);
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
 /* Hero Section */
 .hero-section {
     padding: 140px 0 100px;
