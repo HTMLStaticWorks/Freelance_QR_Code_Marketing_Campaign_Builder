@@ -34,6 +34,16 @@
                 margin-top: auto;
                 flex-wrap: wrap;
             }
+
+            .testimonial-header {
+                min-height: 100px;
+                align-items: flex-start !important;
+            }
+
+            .testimonial-header .text-xs {
+                min-height: 44px;
+                line-height: 1.4;
+            }
         }
 
         .testimonial-card-uniform {
@@ -44,6 +54,29 @@
 
         .testimonial-header {
             min-height: 56px;
+        }
+
+        .testimonial-meta {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        @media (min-width: 992px) {
+            .testimonial-header {
+                min-height: 104px;
+                align-items: flex-start !important;
+            }
+
+            .testimonial-meta {
+                min-height: 78px;
+            }
+
+            .testimonial-rating {
+                min-height: 24px;
+                display: flex;
+                align-items: center;
+            }
         }
 
         body:not(.light-theme) .process-step-number {
@@ -257,7 +290,7 @@
                         <div class="d-flex align-items-center mb-4 testimonial-header">
                             <img src="https://ui-avatars.com/api/?name=Sarah+Chen&background=5eead4&color=0b1020"
                                 class="rounded-circle me-3" width="50" alt="Client">
-                            <div>
+                            <div class="testimonial-meta">
                                 <h5 class="h6 mb-0">Sarah Chen</h5>
                                 <p class="text-secondary text-xs mb-0">Marketing Director, TechCorp</p>
                             </div>
@@ -278,7 +311,7 @@
                         <div class="d-flex align-items-center mb-4 testimonial-header">
                             <img src="https://ui-avatars.com/api/?name=Marcus+Johnson&background=5eead4&color=0b1020"
                                 class="rounded-circle me-3" width="50" alt="Client">
-                            <div>
+                            <div class="testimonial-meta">
                                 <h5 class="h6 mb-0">Marcus Johnson</h5>
                                 <p class="text-secondary text-xs mb-0">CEO, RetailChain Pro</p>
                             </div>
@@ -299,7 +332,7 @@
                         <div class="d-flex align-items-center mb-4 testimonial-header">
                             <img src="https://ui-avatars.com/api/?name=Emily+Rodriguez&background=5eead4&color=0b1020"
                                 class="rounded-circle me-3" width="50" alt="Client">
-                            <div>
+                            <div class="testimonial-meta">
                                 <h5 class="h6 mb-0">Emily Rodriguez</h5>
                                 <p class="text-secondary text-xs mb-0">Creative Director, AdAgency X</p>
                             </div>
