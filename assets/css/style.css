@@ -156,7 +156,7 @@ h6 {
     border: 1px solid var(--border-color);
     border-radius: 12px;
     background: rgba(18, 26, 47, 0.9);
-    color: var(--text-primary);
+    color: #f8fafc;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -166,6 +166,12 @@ h6 {
     visibility: hidden;
     transform: translateY(8px);
     transition: var(--transition);
+}
+
+.back-to-top i {
+    color: inherit;
+    font-size: 20px;
+    line-height: 1;
 }
 
 .back-to-top:hover {
