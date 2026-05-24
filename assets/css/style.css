@@ -4,13 +4,13 @@
     --primary-bg: #0b1020;
     --secondary-bg: #121a2f;
     --card-bg: rgba(255, 255, 255, 0.06);
-    --primary-accent: #5eead4;
+    --primary-accent: #6C47D4;
     --secondary-accent: #7c3aed;
-    --gradient-primary: linear-gradient(135deg, #5eead4, #7c3aed);
+    --gradient-primary: linear-gradient(135deg, #6C47D4, #7c3aed);
     --text-primary: #ffffff;
     --text-secondary: #b8c0d4;
     --border-color: rgba(255, 255, 255, 0.08);
-    --glow-color: rgba(94, 234, 212, 0.25);
+    --glow-color: rgba(108, 71, 212, 0.25);
     --success: #22c55e;
     --warning: #f59e0b;
     --error: #ef4444;
@@ -99,12 +99,20 @@ h6 {
     color: var(--primary-accent);
 }
 
-.nav-toggle-btn {
-    width: 56px;
-    min-width: 56px;
-    height: 40px;
-    min-height: 40px;
-    padding: 8px 10px;
+/* Header Buttons & Icons: Equal Height Alignment */
+.navbar-custom .btn {
+    height: 40px !important;
+    min-height: 40px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 8px 16px !important;
+}
+
+.navbar-custom .nav-toggle-btn {
+    width: 56px !important;
+    min-width: 56px !important;
+    padding: 8px 10px !important;
     gap: 0;
 }
 
@@ -199,7 +207,7 @@ h6 {
     right: -10%;
     width: 600px;
     height: 600px;
-    background: radial-gradient(circle, rgba(94, 234, 212, 0.15) 0%, rgba(124, 58, 237, 0.05) 50%, transparent 100%);
+    background: radial-gradient(circle, rgba(108, 71, 212, 0.15) 0%, rgba(124, 58, 237, 0.05) 50%, transparent 100%);
     filter: blur(80px);
     z-index: -1;
 }
@@ -287,7 +295,7 @@ h6 {
 
 .sidebar-link:hover,
 .sidebar-link.active {
-    background: rgba(94, 234, 212, 0.1);
+    background: rgba(108, 71, 212, 0.1);
     color: var(--primary-accent);
 }
 
@@ -395,10 +403,13 @@ h6 {
     opacity: 1 !important;
 }
 
-.form-control:focus {
+.form-control:focus,
+.form-select:focus {
     color: var(--text-primary) !important;
-    border-color: var(--primary-accent);
-    background-color: rgba(255, 255, 255, 0.02);
+    border-color: var(--primary-accent) !important;
+    background-color: rgba(255, 255, 255, 0.02) !important;
+    outline-color: #6C47D4 !important;
+    box-shadow: 0 0 0 0.25rem rgba(108, 71, 212, 0.25) !important;
 }
 
 .input-group-text {
@@ -421,4 +432,27 @@ h6 {
     .story-quote {
         min-height: 108px;
     }
+}
+
+/* Custom primary violet brand color overrides */
+.bg-primary-accent {
+    background-color: var(--primary-accent) !important;
+}
+.border-primary-accent {
+    border-color: var(--primary-accent) !important;
+}
+a {
+    color: var(--primary-accent);
+    text-decoration: none;
+    transition: var(--transition);
+}
+a:hover {
+    color: var(--secondary-accent);
+}
+mark {
+    background-color: rgba(108, 71, 212, 0.2);
+    color: var(--text-primary);
+}
+u {
+    text-decoration-color: var(--primary-accent);
 }

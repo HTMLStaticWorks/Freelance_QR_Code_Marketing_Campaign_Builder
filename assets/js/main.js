@@ -23,12 +23,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 datasets: [{
                     label: 'Scans',
                     data: [12000, 19000, 15000, 25000, 22000, 30000, 28000],
-                    borderColor: '#5eead4',
-                    backgroundColor: 'rgba(94, 234, 212, 0.1)',
+                    borderColor: '#6C47D4',
+                    backgroundColor: 'rgba(108, 71, 212, 0.1)',
                     fill: true,
                     tension: 0.4,
                     borderWidth: 3,
-                    pointBackgroundColor: '#5eead4',
+                    pointBackgroundColor: '#6C47D4',
                     pointBorderColor: '#0b1020',
                     pointBorderWidth: 2,
                     pointRadius: 5,
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 labels: ['Mobile', 'Desktop', 'Tablet'],
                 datasets: [{
                     data: [75, 20, 5],
-                    backgroundColor: ['#5eead4', '#7c3aed', '#f59e0b'],
+                    backgroundColor: ['#6C47D4', '#7c3aed', '#f59e0b'],
                     borderWidth: 0,
                     hoverOffset: 10
                 }]
