@@ -18,6 +18,23 @@
     <link rel="stylesheet" href="assets/css/dark-mode.css">
     <link rel="stylesheet" href="assets/css/rtl.css">
     <style>
+        /* Icon Circle Fix — all feature-icon circles on Home 2 */
+        .feature-icon {
+            width: 56px;
+            height: 56px;
+            min-width: 56px;          /* prevent flex from squishing */
+            padding: 0 !important;    /* override Bootstrap p-3 */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .feature-icon i {
+            font-size: 28px !important; /* exactly 50% of 56px */
+            line-height: 1;
+        }
+
         @media (max-width: 1024px) {
             html,
             body.home2-page {
