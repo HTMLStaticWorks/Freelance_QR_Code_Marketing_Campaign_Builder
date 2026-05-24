@@ -123,30 +123,10 @@ h6 {
     border-bottom: 1px solid var(--border-color);
     padding: 15px 0;
     transition: var(--transition);
-    z-index: 1030;          /* above Bootstrap sticky-top (1020) and any section stacking contexts */
-    position: sticky;
-    top: 0;
-}
-
-/* Prevent brand + toggler row from collapsing at small viewports */
-.navbar-custom .container {
-    flex-wrap: nowrap !important;
-}
-
-.navbar-brand {
-    flex-shrink: 0;
-    min-width: 0;
-}
-
-.navbar-toggler {
-    flex-shrink: 0;
 }
 
 .navbar-brand img {
     height: 40px;
-    min-height: 32px;
-    width: auto;
-    display: block;
 }
 
 .nav-link {
