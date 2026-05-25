@@ -235,6 +235,45 @@ document.addEventListener('DOMContentLoaded', function () {
             sidebar.classList.remove('active');
         }
     };
+
+    // Navbar Menu Scroll Lock and Auto-close
+    const navbarCollapse = document.getElementById('navbarNav');
+    if (navbarCollapse) {
+        navbarCollapse.addEventListener('show.bs.collapse', () => {
+            document.body.style.overflow = 'hidden';
+        });
+        
+        navbarCollapse.addEventListener('hidden.bs.collapse', () => {
+            document.body.style.overflow = '';
+        });
+
+        const navLinks = navbarCollapse.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (navbarCollapse.classList.contains('show')) {
+                    document.body.style.overflow = '';
+                    if (typeof bootstrap !== 'undefined') {
+                        const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+                        if (bsCollapse) {
+                            bsCollapse.hide();
+                        }
+                    }
+                }
+            });
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 1200 && document.body.style.overflow === 'hidden') {
+                document.body.style.overflow = '';
+                if (typeof bootstrap !== 'undefined') {
+                    const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+                    if (bsCollapse && navbarCollapse.classList.contains('show')) {
+                        bsCollapse.hide();
+                    }
+                }
+            }
+        });
+    }
 });
 
 // Helper for scroll reveal
