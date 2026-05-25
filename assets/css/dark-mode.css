@@ -154,6 +154,23 @@ body.light-theme .border-color {
     border-color: rgba(0, 0, 0, 0.1) !important;
 }
 
+/* Navbar Toggler Fix */
+body.light-theme .navbar-toggler,
+body.light-theme .navbar-toggler i {
+    color: #0f172a !important;
+    opacity: 1 !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* Mobile/Tablet Menu Fix */
+@media (max-width: 1199.98px) {
+    body.light-theme .navbar-custom .navbar-collapse {
+        background: rgba(255, 255, 255, 0.98);
+        border-color: rgba(0, 0, 0, 0.1);
+    }
+}
+
 /* Buttons */
 body.light-theme .btn-outline-custom {
     color: #0f172a;
